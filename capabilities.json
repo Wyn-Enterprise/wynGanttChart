@@ -1,0 +1,173 @@
+{
+    "dataBinding": {
+        "dataRoles": [
+          {
+            "name": "projectName",
+            "displayNameKey": "Project Name",
+            "kind": "grouping"
+          },
+            {
+                "name": "taskName",
+                "displayNameKey": "Task Name",
+                "kind": "grouping"
+            },
+            {
+                "name": "progress",
+                "displayNameKey": "Project Progress",
+                "kind": "value"
+            },
+            {
+                "name": "startTime",
+                "displayNameKey": "Start Time",
+                "kind": "grouping",
+                "requiredTypes": ["datetime","date"]
+            },
+            {
+                "name": "endTime",
+                "displayNameKey": "End Time",
+                "kind": "grouping",
+                "requiredTypes": ["datetime","date"]
+            },
+            {
+                "name": "status",
+                "displayNameKey": "Status",
+                "kind": "grouping"
+            }
+        ],
+        "dataViewMappings": [
+            {
+                "plain": {
+                    "required": [{
+                        "projectName": {
+                            "min": 1
+                        },
+                        "taskName": {
+                            "min": 1
+                        },
+                        "startTime": {
+                            "min": 1
+                        },
+                        "endTime": {
+                            "min": 1
+                        }
+                    },{
+                        "projectName": {
+                            "min": 1
+                        },
+                        "taskName": {
+                            "max": 0
+                        },
+                        "startTime": {
+                            "min": 1
+                        },
+                        "endTime": {
+                            "min": 1
+                        }
+                      }
+                    ]
+                }
+            }
+        ],
+        "conditions": [
+            {
+                "projectName": {
+                    "max": 1
+                },
+                "taskName": {
+                    "max": 1
+                },
+                "progress": {
+                    "max": 1
+                },
+                "startTime": {
+                    "max": 1
+                },
+                "endTime": {
+                    "max": 1
+                },
+                "status": {
+                    "max": 1
+                }
+            }
+        ]
+    },
+    "options": {
+    "visual": [
+      {
+        "displayName": "Chart Style",
+        "properties": [
+          {
+            "name": "label",
+            "type": "Text",
+            "displayName": "Column Header",
+            "defaultValue": "Task Name"
+          },
+          {
+            "displayNameKey": "Project Width",
+            "name": "projectWidth",
+            "type": "Integer",
+            "min": 10,
+            "defaultValue": 200
+          },
+          {
+            "displayNameKey": "Date Column Width",
+            "name": "dateColumnWidth",
+            "type": "Integer",
+            "min": 10,
+            "defaultValue": 50
+          },
+          {
+            "name": "projectColor",
+            "type": "Color",
+            "displayName": "Project Color",
+            "defaultValue": "#0856f2"
+          },
+          {
+            "name": "taskColors",
+            "type": "Palette",
+            "displayName": "Task Color"
+          },
+          {
+            "name": "showDetail",
+            "type": "Boolean",
+            "displayName": "Expand details by default",
+            "defaultValue": true
+          },
+          {
+            "displayName": "Theme",
+            "name": "style",
+            "type": "Enum",
+            "defaultValue": "dhtmlxgantt_contrast_black",
+            "items": [
+              {"value":"dhtmlxgantt","displayNameKey":"Default"},
+              {"value":"dhtmlxgantt_contrast_black","displayNameKey":"Midnight Black"},
+              {"value":"dhtmlxgantt_contrast_white","displayNameKey":"Tanslucent White"},
+              {"value":"dhtmlxgantt_material","displayNameKey":"Material"},
+              {"value":"dhtmlxgantt_meadow","displayNameKey":"Meadow"},
+              {"value":"dhtmlxgantt_skyblue","displayNameKey":"Sky Blue"},
+              {"value":"dhtmlxgantt_broadway","displayNameKey":"Broadway"}
+            ]
+          }
+        ]
+      },
+      {
+        "type": "title"
+      },
+      {
+        "type": "interaction"
+      },
+      {
+        "type": "appearance"
+      }
+    ]
+  },
+    "actions": [
+        {
+            "type": "focus"
+        },
+        {
+            "type": "annotation"
+        }
+    ],
+    "analysis": []
+}
