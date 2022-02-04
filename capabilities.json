@@ -1,99 +1,97 @@
 {
-  "dataBinding": {
-    "dataRoles": [
-      {
-        "name": "projectName",
-        "displayNameKey": "Project Name",
-        "kind": "grouping"
-      },
-      {
-        "name": "taskName",
-        "displayNameKey": "Task Name",
-        "kind": "grouping"
-      },
-      {
-        "name": "progress",
-        "displayNameKey": "Project Progress",
-        "kind": "value"
-      },
-      {
-        "name": "startTime",
-        "displayNameKey": "Start Time",
-        "kind": "grouping",
-        "requiredTypes": [ "datetime", "date" ]
-      },
-      {
-        "name": "endTime",
-        "displayNameKey": "End Time",
-        "kind": "grouping",
-        "requiredTypes": [ "datetime", "date" ]
-      },
-      {
-        "name": "status",
-        "displayNameKey": "Status",
-        "kind": "grouping"
-      }
-    ],
-    "dataViewMappings": [
-      {
-        "plain": {
-          "required": [
+    "dataBinding": {
+        "dataRoles": [
+          {
+            "name": "projectName",
+            "displayNameKey": "Project Name",
+            "kind": "grouping"
+          },
             {
-              "projectName": {
-                "min": 1
-              },
-              "taskName": {
-                "min": 1
-              },
-              "startTime": {
-                "min": 1
-              },
-              "endTime": {
-                "min": 1
-              }
+                "name": "taskName",
+                "displayNameKey": "Task Name",
+                "kind": "grouping"
             },
             {
-              "projectName": {
-                "min": 1
-              },
-              "taskName": {
-                "max": 0
-              },
-              "startTime": {
-                "min": 1
-              },
-              "endTime": {
-                "min": 1
-              }
+                "name": "progress",
+                "displayNameKey": "Project Progress",
+                "kind": "value"
+            },
+            {
+                "name": "startTime",
+                "displayNameKey": "Start Time",
+                "kind": "grouping",
+                "requiredTypes": ["datetime","date"]
+            },
+            {
+                "name": "endTime",
+                "displayNameKey": "End Time",
+                "kind": "grouping",
+                "requiredTypes": ["datetime","date"]
+            },
+            {
+                "name": "status",
+                "displayNameKey": "Status",
+                "kind": "grouping"
             }
-          ]
-        }
-      }
-    ],
-    "conditions": [
-      {
-        "projectName": {
-          "max": 1
-        },
-        "taskName": {
-          "max": 1
-        },
-        "progress": {
-          "max": 1
-        },
-        "startTime": {
-          "max": 1
-        },
-        "endTime": {
-          "max": 1
-        },
-        "status": {
-          "max": 1
-        }
-      }
-    ]
-  },
-  "options": {
+        ],
+        "dataViewMappings": [
+            {
+                "plain": {
+                    "required": [{
+                        "projectName": {
+                            "min": 1
+                        },
+                        "taskName": {
+                            "min": 1
+                        },
+                        "startTime": {
+                            "min": 1
+                        },
+                        "endTime": {
+                            "min": 1
+                        }
+                    },{
+                        "projectName": {
+                            "min": 1
+                        },
+                        "taskName": {
+                            "max": 0
+                        },
+                        "startTime": {
+                            "min": 1
+                        },
+                        "endTime": {
+                            "min": 1
+                        }
+                      }
+                    ]
+                }
+            }
+        ],
+        "conditions": [
+            {
+                "projectName": {
+                    "max": 1
+                },
+                "taskName": {
+                    "max": 1
+                },
+                "progress": {
+                    "max": 1
+                },
+                "startTime": {
+                    "max": 1
+                },
+                "endTime": {
+                    "max": 1
+                },
+                "status": {
+                    "max": 1
+                }
+            }
+        ]
+    },
+    "options": {
     "visual": [
       {
         "displayName": "Chart Style",
@@ -136,103 +134,18 @@
             "defaultValue": true
           },
           {
-            "displayName": "Set Null End Date As",
-            "name": "nullEndDate",
-            "type": "Enum",
-            "items": [
-              {
-                "value": "startDate",
-                "displayNameKey": "Same as Start Date"
-              },
-              {
-                "value": "today",
-                "displayNameKey": "Today"
-              },
-              {
-                "value": "futureDate",
-                "displayNameKey": "Future Date"
-              }
-            ],
-            "defaultValue": "startDate"
-          },
-          {
-            "displayName": "No of Days in Future",
-            "name": "daysInFuture",
-            "type": "Integer",
-            "min": 0,
-            "defaultValue": 1
-          },
-          {
-            "displayName": "Relative To",
-            "name": "relativeTo",
-            "type": "Enum",
-            "defaultValue": "relativeToStartDate",
-            "items": [
-              {
-                "value": "relativeToStartDate",
-                "displayName": "Start Date"
-              },
-              {
-                "value": "relativeToToday",
-                "displayName": "Today"
-              }
-            ]
-          },
-          {
-            "name": "enum",
-            "displayName": "Enum",
-            "type": "Enum",
-            "items": [
-              {
-                "value": "show",
-                "displayName": "Show"
-              },
-              {
-                "value": "hide",
-                "displayName": "Hide"
-              }
-            ],
-            "defaultValue": "show"
-          },
-          {
-            "name": "text",
-            "displayName": "Text",
-            "type": "Text"
-          },
-          {
             "displayName": "Theme",
             "name": "style",
             "type": "Enum",
             "defaultValue": "dhtmlxgantt_contrast_black",
             "items": [
-              {
-                "value": "dhtmlxgantt",
-                "displayNameKey": "Default"
-              },
-              {
-                "value": "dhtmlxgantt_contrast_black",
-                "displayNameKey": "Midnight Black"
-              },
-              {
-                "value": "dhtmlxgantt_contrast_white",
-                "displayNameKey": "Tanslucent White"
-              },
-              {
-                "value": "dhtmlxgantt_material",
-                "displayNameKey": "Material"
-              },
-              {
-                "value": "dhtmlxgantt_meadow",
-                "displayNameKey": "Meadow"
-              },
-              {
-                "value": "dhtmlxgantt_skyblue",
-                "displayNameKey": "Sky Blue"
-              },
-              {
-                "value": "dhtmlxgantt_broadway",
-                "displayNameKey": "Broadway"
-              }
+              {"value":"dhtmlxgantt","displayNameKey":"Default"},
+              {"value":"dhtmlxgantt_contrast_black","displayNameKey":"Midnight Black"},
+              {"value":"dhtmlxgantt_contrast_white","displayNameKey":"Tanslucent White"},
+              {"value":"dhtmlxgantt_material","displayNameKey":"Material"},
+              {"value":"dhtmlxgantt_meadow","displayNameKey":"Meadow"},
+              {"value":"dhtmlxgantt_skyblue","displayNameKey":"Sky Blue"},
+              {"value":"dhtmlxgantt_broadway","displayNameKey":"Broadway"}
             ]
           }
         ]
@@ -248,13 +161,13 @@
       }
     ]
   },
-  "actions": [
-    {
-      "type": "focus"
-    },
-    {
-      "type": "annotation"
-    }
-  ],
-  "analysis": []
+    "actions": [
+        {
+            "type": "focus"
+        },
+        {
+            "type": "annotation"
+        }
+    ],
+    "analysis": []
 }
