@@ -134,18 +134,82 @@
             "defaultValue": true
           },
           {
+            "displayName": "Set Null End Date As",
+            "name": "nullEndDate",
+            "type": "Enum",
+            "items": [
+              {
+                "value": "startDate",
+                "displayNameKey": "Same as Start Date"
+              },
+              {
+                "value": "today",
+                "displayNameKey": "Today"
+              },
+              {
+                "value": "futureDate",
+                "displayNameKey": "Future Date"
+              }
+            ],
+            "defaultValue": "futureDate"
+          },
+          {
+            "displayName": "Future Date Relative To",
+            "name": "relativeTo",
+            "type": "Enum",
+            "defaultValue": "relativeToStartDate",
+            "items": [
+              {
+                "value": "relativeToStartDate",
+                "displayName": "Start Date"
+              },
+              {
+                "value": "relativeToToday",
+                "displayName": "Today"
+              }
+            ]
+          },
+          {
+            "displayName": "No of Days in Future",
+            "name": "daysInFuture",
+            "type": "Integer",
+            "min": 0,
+            "defaultValue": 1
+          },
+          {
             "displayName": "Theme",
             "name": "style",
             "type": "Enum",
             "defaultValue": "dhtmlxgantt_contrast_black",
             "items": [
-              {"value":"dhtmlxgantt","displayNameKey":"Default"},
-              {"value":"dhtmlxgantt_contrast_black","displayNameKey":"Midnight Black"},
-              {"value":"dhtmlxgantt_contrast_white","displayNameKey":"Tanslucent White"},
-              {"value":"dhtmlxgantt_material","displayNameKey":"Material"},
-              {"value":"dhtmlxgantt_meadow","displayNameKey":"Meadow"},
-              {"value":"dhtmlxgantt_skyblue","displayNameKey":"Sky Blue"},
-              {"value":"dhtmlxgantt_broadway","displayNameKey":"Broadway"}
+              {
+                "value": "dhtmlxgantt",
+                "displayNameKey": "Default"
+              },
+              {
+                "value": "dhtmlxgantt_contrast_black",
+                "displayNameKey": "Midnight Black"
+              },
+              {
+                "value": "dhtmlxgantt_contrast_white",
+                "displayNameKey": "Tanslucent White"
+              },
+              {
+                "value": "dhtmlxgantt_material",
+                "displayNameKey": "Material"
+              },
+              {
+                "value": "dhtmlxgantt_meadow",
+                "displayNameKey": "Meadow"
+              },
+              {
+                "value": "dhtmlxgantt_skyblue",
+                "displayNameKey": "Sky Blue"
+              },
+              {
+                "value": "dhtmlxgantt_broadway",
+                "displayNameKey": "Broadway"
+              }
             ]
           }
         ]
