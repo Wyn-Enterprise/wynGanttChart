@@ -16,7 +16,10 @@ Steps to generate .viz file:
 1. Update the version in package.json and visual.json before release.
 2. Pack the visual by build tools. Run 'wyn-visual-tools package' command. This command will generate a file with extension 'viz'.
 3. Upload the viz file to your Wyn Enterprise server using the Resource Portal.
-4. The visual will appear under the Custom Visualization tab on the Dashboard Designer.
+4. Go to Admin portal > Documents > Visualization.
+5. Click on the options icon (3 vertical dots) in the same row as the visualization (eg. Gantt Chart) and select 'Configurations'
+6. In the dialog set 'Use Sandbox Restriction' to False and click Save.
+7. The visual will appear under the Custom Visualization tab on the Dashboard Designer.
 
 Optional Steps:
 
