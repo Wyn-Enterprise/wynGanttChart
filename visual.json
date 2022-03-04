@@ -1,5 +1,5 @@
 {
-  "name": "Gantt Chart v7",
+  "name": "Gantt Chart",
   "displayName": "Gantt Chart",
   "displayNameKey": "gantt",
   "icon": "visualIcon",
@@ -11,6 +11,9 @@
       "visualIcon": "assets/icon.png"
     }
   },
-  "configuration": {},
+  "configuration": {
+    "$runInIframe": true,
+    "$trusted": true
+  },
   "cliVersion": "4.1.0"
 }
