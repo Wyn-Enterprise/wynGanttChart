@@ -226,12 +226,39 @@
     ]
   },
     "actions": [
-        {
-            "type": "focus"
-        },
-        {
-            "type": "annotation"
-        }
+      {
+        "type": "clearSelection"
+      },
+      {
+        "type": "focus"
+      },
+      {
+        "type": "annotation"
+      },
+      {
+        "type": "shareScenario"
+      },
+      {
+        "type": "openFullDashboard"
+      },
+      {
+        "type": "export"
+      },
+      {
+        "type": "filter"
+      },
+      {
+        "type": "sort"
+      },
+      {
+        "type": "rank"
+      },
+      {
+        "type": "convertVisual"
+      },
+      {
+        "type": "analysisPath"
+      }  
     ],
     "analysis": []
 }
